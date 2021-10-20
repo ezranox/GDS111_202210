@@ -11,12 +11,14 @@
 <body>
 
     <div id="fixed"></div>
+    <div id="top"></div>
  
     <!--In the index.html body element, create a div with an id of "wrapper" -->
     <div id="wrapper">
+        <div id="main header">
 
         <!--Inside of the #wrapper div, create an h1 tag that includes the following text content: Week 3 | Demo -->   
-        <h1>Week 3 | Demo</h1>
+        <h1>Week 3 | <a href="https://www.google.com" target="_blank">Demo</a></h1>
 
         <!--Below the h1, create a div with an id of "main-nav"-->
             <div id="main-nav"></div>
@@ -28,6 +30,8 @@
             <a class="btn" href="index.html">Home</a>
             <a class="btn" href="index.html">Hobbies</a>
             <a class="btn" href="schools.hmtl">Schools</a>
+
+
     
         <!--Below the #main-nav, create a div with a class of "section"-->
             <div class="section">
@@ -53,6 +57,25 @@
     
         <!--Below this .section div, repeat steps 7 - 10 two times, once for a Hobbies section and another for Schools. Do not include images in these two new sections, and instead of using paragraph tags, include a list (unordered for Hobbies and ordered for Schools)-->
     
+    <h2 id="Hobbies"> Hobbies </h2>
+    <ol>
+        <li>Streaming</li>
+        <li>Reading</li>
+        <li>Writing</li>
+    </ol>
+
+    <!--absolute positioning and z-index-->
+    <div id="boxes">
+
+        <div id="red"></div>
+        <div id="green"></div>
+        <div id="blue"></div>
+
+    </div>
+
+
+
+
         <h2 id="Schools"> Schools </h2>
     
         <ul>
@@ -64,7 +87,7 @@
         <!--Below the schools section, create a final div with an id of "footer"-->
         <div id="footer">
             <!--Inside of the #footer, add a paragraph tag that holds the copywrite symbol, the year, the class name, and your name-->
-            <a href=""> Back to Top</a>
+            <a href="#top"> Back to Top</a>
             <p>&copy; 2021| GDS111.21 | E RIVERA</p>
 
 
