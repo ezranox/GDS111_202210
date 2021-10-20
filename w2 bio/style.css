@@ -1,0 +1,37 @@
+body{
+    background-color:lightgray; 
+    font-family:cursive;
+    font-size:medium;
+    color:darkgreen;
+
+}
+
+#container{
+     width:970px;
+     padding:10px;
+     margin:0 auto;
+     box-shadow:0 0 80px black;
+     text-align:center;
+     }
+
+h1{
+    width:950px;
+    padding:10px;
+    text-align:center;
+    background-color:lightskyblue;
+    border-style:solid;
+}
+
+h2{
+    width:950px;
+    padding:10px;
+    background-color:lightskyblue;
+    border-style:solid;
+    text-align:left;
+}
+
+img{
+    border-style:solid;
+    border-width:6px;
+    border-color:mediumspringgreen;
+}
