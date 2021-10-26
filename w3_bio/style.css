@@ -4,7 +4,65 @@ body{
     margin: 20px;
 }
 
-#h1{
-    float:left;
-
+#main-header{
+    text-align:center;
+    margin-right:4%;
 }
+
+#main-nav{
+    overflow:hidden;
+    background-color:lightblue;
+     display:inline-block;  
+    margin-left:25%;
+    align-items:center;
+}
+
+.nav{
+    float:left;
+    text-align:center;
+    padding:14px 16px 8px 14px;
+    font-size:x-large;
+    font-family:'Roboto Mono';
+    color:lightslategray;
+    background-color: mistyrose;
+    border-style:solid;
+    border-color: plum;
+    justify-content:space-between;
+    left:600px;
+    top:10px;
+    margin:20px;
+    height:40px;
+    width:303px;
+}
+
+#content:after{
+    display:table;
+    content:"";
+    clear:both;
+}
+
+#content div{
+    float:left;
+    width:49%;
+}
+
+#bio-content,#hobbies-content,#Education,#Image{
+    font-size:x-large;
+    color:lightslategrey;
+    background-color:mistyrose;
+    border-color:plum;
+    min-height:100px;
+    border-style:solid;
+}
+
+#bio-content{
+    margin-right:10px;
+}
+
+#footer{
+    text-align:center;
+    margin-right:4%;
+}
+
+
+
