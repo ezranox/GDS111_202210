@@ -35,16 +35,24 @@ body{
     width:303px;
 }
 
-#content:after{
-    display:table;
-    content:"";
-    clear:both;
+#content{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 100%;
+
 }
 
-#content div{
-    float:left;
-    width:49%;
+#content > div{
+    flex: 50%;
+    padding: 10px;
+    align-content: center;
 }
+
+#bio-content{
+   
+}
+
 
 #bio-content,#hobbies-content,#Education,#Image{
     font-size:x-large;
@@ -55,7 +63,7 @@ body{
     border-style:solid;
 }
 
-#bio-content{
+#bio-content, #Education{
     margin-right:10px;
 }
 
