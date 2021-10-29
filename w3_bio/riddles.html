@@ -7,101 +7,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 4 Demo</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="week4.js"></script>
+    <script type="text/javascript" src="week3.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <div id="wrapper">
 
-        <div id="header" >
+        <div id="main-header">
             <h1 id="title"> Ezra Nox Rivera</h1>
         </div>
         <!--/ #header-->
 
-        <div id="nav" >
+        <div id="main-nav">
 
             <!--div that will center the nav buttons in the nav ba-->
             <div id="buttons">
 
-                <a href="index.html" class="nav-link">HOME</a>
-                <a href="schools.html" class="nav-link"> SCHOOLS</a>
-                <a href="riddles.html" class="nav-link">RIDDLES</a>
+                <a href="index.html" class="nav-link nav">HOME</a>
+                <a href="schools.html" class="nav-link nav"> SCHOOLS</a>
+                <a href="riddles.html" class="nav-link nav">RIDDLES</a>
 
 
             </div>
             <!--/ #buttons-->
 
         </div><!-- #nav-->
-
+        <h2 class="heading">Riddles</h2>
         <div id="content">
 
-            <h2 class="section-title">Riddles</h2>
+
 
             <!--resuable div for EACH question-->
-            <div class="sections">
+            <div id="riddle1">
 
-                <p class="question-text">1. What is always in front of you but can't be seen?</p>
+                <div class="sections">
+                    <p class="question-text">1. What is always in front of you but can't be seen?</p>
 
-                <div class="answer-btn">
+                    <div class="answer-btn">
 
-                    <input class="get" type="button" value="boop!" onclick="answer1();" />
+                        <input class="get" type="button" value="ANSWER" onclick="answer1();" />
+
+
+                    </div>
+                    <!--/ .answer-btn-->
+
+
+                    <!--creates empty element space for JS to write answer into page-->
+                    <span class="the-answer" id="question1"></span>
+                </div>
+                <div class="sections">
+
+                    <p class="question-text">2. What two words, added together, contain the most letters?</p>
+
+                    <div class="answer-btn">
+
+                        <input class="get" type="button" value="ANSWER" onclick="answer2();" />
+
+
+                    </div>
+                    <!--/ .answer-btn-->
+
+
+                    <!--creates empty element space for JS to write answer into page-->
+                    <span class="the-answer" id="question2"></span>
 
 
                 </div>
-                <!--/ .answer-btn-->
+                <!--/ .questions-->
+                <div class="sections">
+
+                    <p class="question-text">3. What four-letter word can be written forward,backward, or upside down,
+                        and
+                        can still
+                        be read from left to right?</p>
+
+                    <div class="answer-btn">
+
+                        <input class="get" type="button" value="ANSWER" onclick="answer3();" />
 
 
-                <!--creates empty element space for JS to write answer into page-->
-                <span class="the-answer" id="question1"></span>
+                    </div>
+                    <!--/ .answer-btn-->
 
 
+                    <!--creates empty element space for JS to write answer into page-->
+                    <span class="the-answer" id="question3"></span>
+
+
+                </div>
+                <div class="sections">
+                    <p class="question-text"> 4. Which part of a road do Ghost's love to travel the most? </p>
+
+                    <div class="answer-btn">
+
+                        <input class="get" type="button" value="ANSWER" onclick="answer4();" />
+                    </div>
+
+                    <span class="the-answer" id="question4"></span>
+                </div>
+
+                <div class="sections">
+                    <p class="question-text"> 5. What has six faces, but does not wear makeup, has twenty-one eyes, but
+                        cannot see? What is it?</p>
+
+                    <div class="answer-btn">
+
+                        <input class="get" type="button" value="ANSWER" onclick="answer5();" />
+                    </div>
+
+                    <span class="the-answer" id="question5"></span>
+                </div>
             </div>
-            
+            <div id="riddle2">
+                <div class="sections">
+                    <p class="question-text"> 6. What runs around the whole yard without moving? </p>
+
+                    <div class="answer-btn">
+
+                        <input class="get" type="button" value="ANSWER" onclick="answer6();" />
+                    </div>
+
+                    <span class="the-answer" id="question6"></span>
+                </div>
+
+                <div class="sections">
+                    <p class="question-text"> 7.What can you catch but never throw? </p>
+
+                    <div class="answer-btn">
+
+                        <input class="get" type="button" value="ANSWER" onclick="answer7();" />
+                    </div>
+
+                    <span class="the-answer" id="question7"></span>
+                </div>
+
+                <div class="sections">
+                    <p class="question-text"> 8. What is more useful when it's broken? </p>
+
+                    <div class="answer-btn">
+
+                        <input class="get" type="button" value="ANSWER" onclick="answer8();" />
+                    </div>
+
+                    <span class="the-answer" id="question8"></span>
+                </div>
+
+                <div class="sections">
+                    <p class="question-text"> 9. What question can you never answer yes to? </p>
+
+                    <div class="answer-btn">
+
+                        <input class="get" type="button" value="ANSWER" onclick="answer9();" />
+                    </div>
+
+                    <span class="the-answer" id="question9"></span>
+                </div>
+
+                <div class="sections">
+                    <p class="question-text"> 10. What can you keep after giving to someone?</p>
+
+                    <div class="answer-btn">
+
+                        <input class="get" type="button" value="ANSWER" onclick="answer10();" />
+                    </div>
+
+                    <span class="the-answer" id="question10"></span>
+                </div>
             </div>
-        <!--/ .questions-->
-
-        <div class="sections">
-
-            <p class="question-text">2. What two words, added together, contain the most letters?</p>
-
-            <div class="answer-btn">
-
-                <input class="get" type="button" value="ANSWER" onclick="answer2();" />
-
-
-            </div>
-            <!--/ .answer-btn-->
-
-
-            <!--creates empty element space for JS to write answer into page-->
-            <span class="the-answer" id="question2"></span>
-
 
         </div>
         <!--/ .questions-->
+
+
+    </div>
+
+
 
     </div>
     <!--/ .questions-->
 
-    <div class="sections">
 
-        <p class="question-text">3. What four-letter word can be written forward,backward, or upside down, and can still be read from left to right?</p> 
-
-        <div class="answer-btn">
-
-            <input class="get" type="button" value="ANSWER" onclick="answer3();" />
-
-
-        </div>
-        <!--/ .answer-btn-->
-
-
-        <!--creates empty element space for JS to write answer into page-->
-        <span class="the-answer" id="question3"></span>
-
-
-    </div>
     <!--/ .questions-->
     </div>
     <!--/ #content-->

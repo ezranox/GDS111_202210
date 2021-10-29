@@ -45,13 +45,21 @@ body{
 
 }
 
+#content2{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 100%;
+
+}
+
 #content > div{
     flex: 50%;
     padding: 10px;
     align-content: center;
 }
 
-#bio-content,#hobbies-content,#Education,#Image{
+#bio-content,#hobbies-content,#Education,#Image,#riddle1,#riddle2{
     font-size:x-large;
     color:lightslategrey;
     background-color:mistyrose;
@@ -64,6 +72,11 @@ body{
     margin-right:10px;
 }
 
+.heading{
+    font-size:x-large;
+    font-family:'Roboto Mono';
+    text-align:center;
+}
 
 
 
