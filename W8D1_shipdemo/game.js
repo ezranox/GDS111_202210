@@ -68,6 +68,7 @@ ship.vy *= friction
 ship.move()
 ship.draw()
 
+//if ship leaves right edge of canvas, returns at left edge
 if(ship.x > canvas.width()+25) {
     //if the current ship x coord is grreater than (beyond) the canvas width +25 (size of the ship)
 
@@ -75,9 +76,26 @@ if(ship.x > canvas.width()+25) {
     ship.x = -25
 }
 
+//if ship leaves bottom edge of canvas, returns at the top edge
 if(ship.y > canvas.width()+25) {
 
-    ship.y = +25
+    ship.y = -25
+}
+
+//if ship leaves left edge of canvas, returns at right edge
+if(ship.x < 0 - 25) { //0 is the x coord of the left margin, 25 is the length of the ship
+    //if the current ship x coord is greater than (beyond) the canvas width +25 (size of the ship)
+
+    //move ship x coord t
+    ship.x = 825 //800 is the x coord of the right canvas margin
+}
+
+//if ship leaves right edge of canvas, returns at left  edge
+if(ship.y < 0 - 25) { //0 is the x coord of the left margin, 25 is the length of the ship
+    //if the current ship x coord is greater than (beyond) the canvas width +25 (size of the ship)
+
+    //move ship x coord t
+    ship.y = 825 //800 is the x coord of the right canvas margin
 }
 
 
