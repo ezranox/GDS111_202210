@@ -267,6 +267,4 @@ function detectCollision (distance,calcDistance) {
     return distance < calcDistance //will return TRUE or False value
 }
 
-
-
 } //Player Ship (CLOSE) 
