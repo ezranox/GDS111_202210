@@ -15,8 +15,8 @@ shapes.onload = function() {
 
     //recttangle
 
-   ctx.fillStyle = "yellow" 
-    ctx.strokeStyle = "black"        
+   ctx.fillStyle = "purple" 
+    ctx.strokeStyle = "blue"        
     ctx.lineWidth = "5"
 
     ctx.fillRect(85, 300, 109, 105)
