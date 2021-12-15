@@ -13,10 +13,26 @@ var ship
 
 //IMAGE SPRITES FOR GAME/* -----------------------ADDED for W10D1---------------
 var shipSprite = new Image()
-shipSprite.src =""
+shipSprite.src ="images/alienship.png"
 shipSprite.onload = function() {
+}
 
+var asteroidSprite = new Image()
+asteroidSprite.src = "images/cupcake.png"
+asteroidSprite.onload = function() {
 
+}
+
+var gStart = new Image()
+gStart.src = "images/stars.jpg"
+gStart.onload = function() {
+
+}
+
+var gOver = new Image()
+gOver.src ="images/gameover.png"
+gOver.onload = function(){
+    
 }
 
 function randomRange(high, low){
