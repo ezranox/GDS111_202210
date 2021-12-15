@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitty, Doggo, Bunny</title>
+    <meta name="author" content="Jay Aguiar">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+
+        <h2>Player</h2>
+        <div class="player">
+
+            <!-- p = player !-->
+            <img src="images/kitty.png" id="rock_p" class="pic" onclick="play(0);"/>
+            <img src="images/doggo.jpg" id="paper_p" class="pic" onclick="play(1);">
+            <img src="images/bunny.jpg" id="scissors_p" class="pic" onclick="play(2);"/>
+
+        </div><!--/ .player-->
+
+        <h2>Computer</h2>
+        <div class="computer">
+
+            <!-- c = computer !-->
+            <img src="images/kitty.png" id="rock_c" class="pic" />
+            <img src="images/doggo.jpg" id="paper_c" class="pic" />
+            <img src="images/bunny.jpg" id="scissors_c" class="pic"/>
+
+        </div><!--/ .player-->
+
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <nav>
+            <button id="rock" onclick="play(0);">Kitty</button>
+            <button id="paper" onclick="play(1);">Doggo</button>
+            <button id="scissors" onclick="play(2);">Bunny</button>
+        </nav>
+        <div id="result">
+
+            <p>PLAYER CHOSE: <span id="pChoice"></span></p>
+            <p>COMPUTER CHOSE: <span id="cChoice"></span></p>
+            
+            <p>GAME OUTCOME: <span id="results"></span></p>
+
+        </div><!--/ #result-->
+    </div>
+    <script src="rps.js"></script>
+</body>
+</html>
