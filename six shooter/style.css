@@ -9,7 +9,7 @@
 
 body {
     background-color: burlywood;
-    background-image: url(images/Jojobackground.png);
+    background-image: url(images/hazard.png);
 }
 
 header {
@@ -92,7 +92,7 @@ header {
 
     margin-top: 170px;
     margin-left: 350px;
-    ;
+    color:azure;
 }
 
 #total-ammo {
