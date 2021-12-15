@@ -1,14 +1,14 @@
 var pics = new Array()
 
 pics[0] ="images/kitty.png"
-pics[1] = "images/doggo.jpg"
-pics[2] = "images/bunny.jpg"
+pics[1] = "images/doggo.png"
+pics[2] = "images/bunny.png"
 
 var pics2 = new Array()
 
 pics2 [0] = "images/kitty.png"
-pics2 [1] = "images/doggo/jpg"
-pics2 [2] = "images/bunny.jpg"
+pics2 [1] = "images/doggo.png"
+pics2 [2] = "images/bunny.png"
 
 var btn = document.querySelectorAll("button")
 
