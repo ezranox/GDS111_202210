@@ -48,9 +48,19 @@ function getDiff(a,b) {
 }//getDiff()
 
 
-function reload() {
+var gun=document.getElementById("gun");
+var realods = document.getElementById("reloads");
 
-    alert("Hello");
+function playagunsound(){
+    gun.play();
+}
+
+function playareloadsound(){
+    reloads.play();
+}
+function reload1() {
+
+   
     var difference = getDiff(maxAmmo, currentAmmo) 
 
     if (difference > 0 && totalAmmo != 0) {
@@ -73,15 +83,3 @@ function reload() {
     updatescreen()
 
 }//reload() END
-
-var gun=document.getElementById("gun");
-var reload=document.getElementById("reload")
-
-function playagunsound(){
-    gun.play();
-}
-
-function playareloadsound(){
-    reload.play();
-    alert("Hello");
-}
