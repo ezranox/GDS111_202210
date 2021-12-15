@@ -1,0 +1,128 @@
+#wrapper {
+    height: 800px;
+    width: 980px;
+    margin: auto;
+    border: 1px solid red;
+    background-color: white;
+}
+
+
+body {
+    background-color: burlywood;
+    background-image: url(images/Jojobackground.png);
+}
+
+header {
+    text-align: center;
+}
+
+#gamebtn {
+
+    margin-left: 0px;
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+
+}
+
+#btn {
+
+    height: 100px;
+    line-height: 100px;
+    width: 150px;
+    margin: auto;
+    border: 1px solid red;
+    text-align: center;
+    background-color: red;
+    color: black;
+    text-decoration: none;
+
+}
+
+.game-link {
+    color: black;
+    text-decoration: none;
+}
+
+.game-link:hover {
+    color: red;
+    background-color: black;
+}
+
+
+#left {
+    float: left;
+    position: relative;
+    top: 85px;
+}
+
+.ammo {
+    float: left;
+    padding: 20px;
+}
+
+
+#right {
+    position: relative;
+    float: left;
+    bottom: 45px;
+    right:191px;
+    padding: 10px;
+    
+}
+
+.btn-right {
+    position: relative;
+    float: left;
+    padding: 5px;
+
+}
+
+#shootbtn {
+    border: 1px solid darkgray;
+    background-color: lightgray;
+}
+
+#reloadbtn {
+    border: 1px solid darkgray;
+    background-color: lightgray;
+}
+
+.copy {
+
+    margin-top: 170px;
+    margin-left: 350px;
+    ;
+}
+
+#total-ammo {
+    border: 1px solid red;
+    
+
+}
+
+#current-ammo {
+    border: 1px solid red;
+
+}
+
+#label {
+    float: left;
+    padding:10px;
+}
+
+#gametitle {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+#image {
+    width: 75%;
+    padding-left:120px;
+    
+}
+
+#blood {
+    width: 50%
+}

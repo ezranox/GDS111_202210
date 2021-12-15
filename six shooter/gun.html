@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Six Shooter</title>
+    <title>Zombie Hunter</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <script type="text/javascript" src="demo.js"></script>
+    <script type="text/javascript" src="sixshooter.js"></script>
 </head>
 
 
@@ -17,13 +17,14 @@
 
         <header>
 
-            <h1>Six Shooter Program</h1>
+            <h1>Zombie Hunter</h1>
+            <img src="images/bloodsplatter.png" alt="Blood Splatter" id="blood"/>
 
         </header>
 
         <div id="target">
 
-            <img src="images.?.jpg/.png" alt="">
+            <img src="images/zombie.jpg" alt="The zombie belongs here" id="image">
 
         </div>
 
@@ -31,9 +32,13 @@
 
             <section id="left">
 
-                <div id="total-ammo"></div>
+                <p id="label"> Total Ammo</p>
 
-                <div id="current-ammo"></div>
+                <div id="total-ammo" class="ammo"></div>
+
+
+                <p id="label"> Current Ammo</p>
+                <div id="current-ammo" class="ammo"></div>
 
             </section>
 
@@ -41,14 +46,16 @@
 
                 <form>
 
+                    <p id="reloadbtn" class="btn-right"></p>
+
                     <p class="btn">
 
-                        <input type="button" value="SHOOT!" class="shoot" onclick="shoot();">
+                        <input type="button" value="SHOOT!" class="shoot" onclick="shoot(); playgunsound();">
                     </p>
 
                     <p class="btn">
 
-                        <input type="button" value="RELOAD!" class="reload" onclick="reload();">
+                        <input type="button" value="RELOAD!" class="reload" onclick="reload(); playreloadsound();">
                     </p>
 
                 </form>
@@ -63,7 +70,17 @@
 
     </div>
 
+    <audio id="gun" src="sounds/Realistic_Gunshot_Sound_Effect.mp3">
+
+        <p> Your Browser sucks and doesn't know HTML5</p>
+
+    </audio>
+
+    <audio id="reload" src="sounds/Gun_Reload_Sound_Effect.mp3">
+
+        <p>Your browser sucks and doesn't know HTML5</p>
+
+    </audio>
 
 </body>
-
 </html>
