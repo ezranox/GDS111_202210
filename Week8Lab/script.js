@@ -18,13 +18,13 @@ shipSprite.onload = function() {
 }
 
 var asteroidSprite = new Image()
-asteroidSprite.src = "images/cupcake.png"
+asteroidSprite.src = "images/cupcakeman.png"
 asteroidSprite.onload = function() {
 
 }
 
 var gStart = new Image()
-gStart.src = "images/stars.jpg"
+gStart.src = "images/Startscreen.png"
 gStart.onload = function() {
 
 }
@@ -32,7 +32,7 @@ gStart.onload = function() {
 var gOver = new Image()
 gOver.src ="images/gameover.png"
 gOver.onload = function(){
-    
+
 }
 
 function randomRange(high, low){
@@ -41,18 +41,19 @@ function randomRange(high, low){
 
 //Class for the Asteroids
 function Asteroid(){
-    this.radius = randomRange(10,2);
-    this.x = randomRange(c.width - this.radius, 0 + this.radius);
-    this.y = randomRange(c.height - this.radius, 0 + this.radius) - c.height;
-    this.vx = randomRange(-5, -10);
-    this.vy = randomRange(10,5);
+    this.radius = randomRange(20,10);
+    this.x = randomRange(c.width - this.radius, 0 + this.radius) + c.width
+    this.y = randomRange(c.height - this.radius, 0 + this.radius);
+    this.vx = randomRange(-8, -15);
+    this.vy = randomRange(15,8);
     this.color = "purple";
 
     this.draw = function(){
         context.save();
         context.beginPath();
         context.fillStyle = this.color;
-        context.arc(this.x,this.y,this.radius,0,2*Math.PI,true);
+        /*context.arc(this.x,this.y,this.radius,0,2*Math.PI,true);*/
+        context.drawImage(asteroidSprite, this.x - this.radius, this.y - this.radius, this.radius*2, this.radius * 2)
         context.closePath();
         context.fill();
         context.restore();
@@ -98,7 +99,7 @@ function PlayerShip(){
             else{
                 this.flamelength = 30;
             }
-            context.fillStyle = "orange";
+            context.fillStyle = "pink";
             context.beginPath();
             context.moveTo(0, this.flamelength);
             context.lineTo(5, 5);
@@ -225,12 +226,13 @@ function keyPressUp(e){
 
 gameStates[0] = function() {
     context.save()
+    context.drawImage(gStart, 0, 0, 800, 600)
     context.font = "30px Arial"
-    context.fillStyle = "white"
+    context.fillStyle = "yellow"
     context.textAlign = "center"
-    context.fillText("Asteroid Avoidance", c.width/2, c.height/2 - 30)
+    context.fillText("Avoid the Flying Cupcake", c.width/2, c.height/2 - 30)
     context.font = "15px Arial"
-    context.fillText("Press ENTER to Start!", c.width/2, c.height/2+ 20)
+    context.fillText("Press ENTER to Play!", c.width/2, c.height/2+ 20)
     context.restore()
 }
 
@@ -286,7 +288,7 @@ gameStates[1] = function() {//GAMEPLAY STATE
              asteroids[i].x = randomRange(c.width - asteroids[i].radius, 0 + asteroids[i].radius);
          }
          if(gameOver == false){
-             asteroids[i].y += asteroids[i].vy;
+             asteroids[i].x += asteroids[i].vx;
          }
          asteroids[i].draw();
      }
@@ -305,6 +307,7 @@ gameStates[1] = function() {//GAMEPLAY STATE
 
 gameStates[2] = function() {//GAME OVER STATE
     context.save()
+    context.drawImage(gOver, 0, 0, 800, 600)
     context.font = "30px Arial"
     context.fillStyle = "white"
     context.textAlign = "center"

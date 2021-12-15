@@ -1,0 +1,59 @@
+#container {
+    background-color:darkorchid;
+    width:900px;
+    height:760ps;
+    margin:auto;
+    padding:2px;
+    
+}
+
+#game{
+    width:880px;
+    height:600px;
+    margin:auto;
+    padding:2px;
+}
+
+body{
+    margin:auto;
+}
+
+#header{
+    padding:2px;
+    text-align:center;
+    font-family:inconsolata;
+}
+
+#footer{
+    padding:5px;
+    margin-top:10px;
+    font-family:inconsolata;
+    text-align:center;
+}
+
+body{
+    background-image:url(images/nightsky.jpg);
+    width:fit-content;
+    height:auto;
+    background-repeat:no-repeat;
+}
+
+#canvas{
+    border: 2px solid black;
+}
+
+canvas{
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+    border: 2px solid black;
+    
+}
+
+header, footer{
+    color:yellow;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+}
+
