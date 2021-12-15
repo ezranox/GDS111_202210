@@ -11,6 +11,13 @@ var gameStates = []
 var currentState = 0
 var ship
 
+//IMAGE SPRITES FOR GAME/* -----------------------ADDED for W10D1---------------
+var shipSprite = new Image()
+shipSprite.src =""
+shipSprite.onload = function() {
+
+
+}
 
 function randomRange(high, low){
     return Math.random() * (high-low) + low;
@@ -87,7 +94,8 @@ function PlayerShip(){
         }
         context.beginPath();
         
-        context.fillStyle = "red";
+        context.fillStyle = "red"; //ship color
+        /*context.beginPath()
         context.moveTo(0, -13);
         context.lineTo(10, 10);
         context.lineTo(-10, 10);
@@ -95,7 +103,13 @@ function PlayerShip(){
         context.closePath();
         context.fill();
 
-        context.restore();
+        context.restore(); */
+        /*-------------------- ADDED for W10D1--------------------------------*/
+        context.drawImage(shipSprite, -20, -20, 40, 40)
+        console.log ("shipSprite drawImage()")
+
+        /*if (invincible) { ... do somethingssssss} :D */
+        context.restore()
     }
 
     this.move = function(){
