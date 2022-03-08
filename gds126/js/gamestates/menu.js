@@ -31,11 +31,14 @@ gameStates[`menu`] =function(){
 	else
 	{
 		//Default Button Graphic
-		startButton.color = `red`
+		startButton.changeState('idle')
+		canvas.style.cursor='auto';
+		//startButton.color = `red`
 	}
 	
 	menuBackground.drawStaticImage();
-	startButton.render()
+	startButton.play().drawSprite();
+	//startButton.play(function(){return})
 }
 	
 	
