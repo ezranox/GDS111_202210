@@ -44,7 +44,7 @@ var playerData ={
 				{width:90, height:90, startX:256, startY:0},
 				{width:90, height:90, startX:256, startY:0},
 				{width:90, height:90, startX:256, startY:0},
-				{width:90, height:90, startX:384, startY:0},
+				//{width:90, height:90, startX:384, startY:0},
 				{width:90, height:90, startX:512, startY:0}
 			]
 		},

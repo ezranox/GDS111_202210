@@ -16,10 +16,11 @@ sky.img.src="images/Sky.png"
 
 //The ground
 var ground = new GameObject({width:canvas.width*10, height:64,y:canvas.height-32, color:"green"})
-ground.img.src="images/ground.png"
+ground.img.src="images/Floor.png"
 
 //A platform
-var plat = new GameObject({width:256, height:64,y:canvas.height-200, color:"green"})
+var plat = new GameObject({width:256, height:64,y:canvas.height-200, color:"transparent"})
+plat.img.src="images/platform.png";
 
 //A level object when it is moved other objects move with it.
 var level = new GameObject({x:0,y:0});
@@ -61,14 +62,14 @@ levelItems.add([caveBack.grid, ground, plat, cave.grid]);
 
 //background
 var bg = new GameObject({x:level.x,y:level.y, width:canvas.width*4, height:canvas.height})
-bg.img.src=`images/Sky.png`
+bg.img.src=`images/longbackground.png`
 
 var clouds = new GameObject({x:level.x,y:level.y})
 clouds.img.src=`images/mrt.jpg`
 
 //farbackground
 var rbg = new GameObject({x:level.x, y:level.y, width:1024, height:512})
-rbg.img.src=`images/hills.png`
+rbg.img.src=`images/mountains.png`
 
 /*------------------vvBULLET STUFFvv----------------------*/
 
@@ -245,10 +246,11 @@ gameStates[`level1`] = function()
 		rbg.x=0; 
 	}
 
-	sky.render()
+	//sky.render()
+	sky.drawStaticImage(-sky.width/2,-sky.height/2);
 	
-	var pattern = context.createPattern(clouds.img, `repeat`);
-	ground.color = pattern
+	groundPattern = context.createPattern(ground.img, `repeat`);
+	ground.color = groundPattern
 
 	rbg.drawStaticImage([0,0]);
 	rbg.drawStaticImage([-rbg.width,0]);
@@ -267,6 +269,7 @@ gameStates[`level1`] = function()
 	context.stroke();*/
 
 	sprites.play().render(`drawSprite`);
+	plat.drawStaticImage([-128,-33]);
 	wiz.play(function(){return}).drawSprite()
 	
 	for(let i=0; i<bullets.length; i++)
