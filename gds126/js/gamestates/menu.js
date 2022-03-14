@@ -2,7 +2,7 @@
 This file contains all of the code for the Main Menu
 ----------------------------------*/
 
-var startButton = new GameObject({width:113, height:38, y:300}).makeSprite(buttonData);
+var startButton = new GameObject({width:113, height:60, y:300}).makeSprite(buttonData);
 
 //startButton.img.src="images/mrt.jpg"
 startButton.width=200;
@@ -11,7 +11,7 @@ console.log(startButton.collisionPoints.right)
 
 
 var menuBackground = new GameObject();
-menuBackground.img.src = "images/startbg.jpg"
+menuBackground.img.src = "images/startbg.png"
 menuBackground.width=canvas.width
 menuBackground.height=canvas.height
 
