@@ -1,23 +1,23 @@
 var buttonData = {
 
     info:{
-        src:''
+        src:'images/startbutton.png'
     },
     states:{
         idle:{
             fps:60,
-            cycle:false,
+            cycle:true,
             frames:
             [
-                {width:128 , height:128 , startX:1024 , startY:0 }
+                {width:113 , height:38 , startX:116 , startY:1}
             ]
         },
         hover: {
             fps:60,
-            cycle:false,
-            fames:
+            cycle:true,
+            frames:
             [
-                {width:128 , height:128 , startX:1024 , startY:0 }
+                {width:113 , height:38 , startX:1 , startY:1}
             ]
         }
     }

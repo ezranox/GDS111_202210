@@ -2,7 +2,8 @@
 This file contains all of the code for the Main Menu
 ----------------------------------*/
 
-var startButton = new GameObject();
+var startButton = new GameObject({width:113, height:38, y:300}).makeSprite(buttonData);
+
 //startButton.img.src="images/mrt.jpg"
 startButton.width=200;
 startButton.hitBoxWidth=800
@@ -10,7 +11,7 @@ console.log(startButton.collisionPoints.right)
 
 
 var menuBackground = new GameObject();
-menuBackground.img.src = "images/mrt.jpg"
+menuBackground.img.src = "images/startbg.jpg"
 menuBackground.width=canvas.width
 menuBackground.height=canvas.height
 
@@ -23,10 +24,13 @@ gameStates[`menu`] =function(){
 		{
 			//Changes to the game state
 			gameStates.changeState(`level1`)
+			sounds.play('bg', 0 );
+			sounds.bg.loop = true;
 		}
 
 		//Hover Effect Graffic
-		startButton.color = `yellow`
+		startButton.changeState('hover')
+		canvas.style.cursor ='pointer'
 	}
 	else
 	{
