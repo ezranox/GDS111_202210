@@ -14,7 +14,7 @@ if(player.x < 0 + player.width/2)
 }
 //---------------------------------------------------
 
-//---------------Bounce twards the Top-----------------------
+//---------------Bounce towards the Top-----------------------
 if(player.y < 0 + player.height/2)
 {
     player.y = 0 + player.height/2;
