@@ -24,8 +24,18 @@ function Player()
 			context.translate(this.x, this.y);
 			context.fillRect((-this.width/2), (-this.height/2), this.width, this.height);
 		context.restore();
-		
 	}	
+	this.drawCircle = function()
+	{
+		context.save();
+			context.translate(this.x, this.y);
+			context.beginPath();
+			context.fillStyle=this.color;
+			context.arc(0,0,this.width/2,0,360*Math.PI/180,true)
+			context.closePath();
+			context.fill();	
+		context.restore();
+	}
 	
 	//This changes the player's position
 	this.move = function()

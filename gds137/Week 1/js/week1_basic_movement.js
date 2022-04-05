@@ -26,5 +26,5 @@ function animate()
 	player.x += 2;
 	
 	//Update the Screen
-	player.draw();
+	player.drawCircle();
 }
