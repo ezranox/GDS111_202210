@@ -30,6 +30,7 @@ function animate()
 if(player.x > canvas.width - player.width/2)
 {
     player.x = canvas.width - player.width/2;
+	player.color = "blue";
     player.vx = -player.vx;
 }
 //---------------------------------------------------
@@ -38,6 +39,7 @@ if(player.x > canvas.width - player.width/2)
 if(player.x < 0 + player.width/2)
 {
     player.x = 0 + player.width/2;
+	player.color = "purple";
     player.vx = -player.vx;
 }
 //---------------------------------------------------
@@ -45,6 +47,7 @@ if(player.x < 0 + player.width/2)
 if(player.y < 0 + player.height/2)
 {
     player.y = 0 + player.height/2;
+	player.color = "black"
     player.vy = -player.vy;
 }
 //---------------------------------------------------
@@ -53,6 +56,7 @@ if(player.y < 0 + player.height/2)
 if(player.y > canvas.height - player.height/2)
 {
     player.y = canvas.height - player.height/2;
+	player.color = "red";
     player.vy = -player.vy;
 }
 //---------------------------------------------------
