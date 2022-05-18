@@ -103,7 +103,7 @@ function GameObject(x,y,w,h,color)
 			context.translate(this.x, this.y);
 			//context.fillRect((-this.width/2), (-this.height/2), this.width, this.height);
 			context.beginPath();
-			context.arc((0), (0), this.width/2, 0, 2 * Math.PI);
+			context.arc((-this.width/2), (-this.height/2), this.width/2, 0, 2 * Math.PI);
 			context.closePath();
 			context.fill()
 		context.restore();
@@ -153,12 +153,11 @@ function GameObject(x,y,w,h,color)
 		this.height = Math.floor(Math.random() * 300) + 100;
 	}
 
-	this.score = function(p1Wins)
+	this.score = function(p1Wins,p2Wins)
     {
         context.save();
-        context.font = "16px Arial black";
-		context.color = "dark gray"
-        context.fillText("Score: "+p1Wins, 80, 25);
+        context.font = "20px Times black";
+        context.fillText("Player 1: "+p1Wins+"  " +" Player 2: "+p2Wins, 417, 25);
         context.restore();
     }
 
