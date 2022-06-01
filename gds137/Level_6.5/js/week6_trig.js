@@ -21,6 +21,7 @@ var states = [];
 
 
 var player = new GameObject({width:50, height:50, angle:0, x:canvas.width/2, y:canvas.height-100, force:2, color:"gray"})
+var deg;
 var goal = new GameObject({width:50, height:50, color:"cyan"})
 var dot = new GameObject({width:50, height:50, color:"orange"})
 var level = new Level();
@@ -137,6 +138,15 @@ states["play"] = function()
 	//------------------------------------------------------END OF INSTRUCTIONS-------------------------------------------------
 	//--------------------------------------------------------------------------------------------------------------------------
 
+	radians = Math.atan2(mouse.y - player.y, mouse.x - player.x);
+
+	deg = radians * 180/Math.PI;
+
+	player.angle = deg;
+
+	player.vx = Math.cos(radians) * player.force;
+	player.vy = Math.sin(radians) * player.force;
+	
 	player.move();
 
 	if(goal.hitTestPoint(player))
